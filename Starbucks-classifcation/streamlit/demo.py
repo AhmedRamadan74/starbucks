@@ -9,8 +9,8 @@ from plotly.subplots import make_subplots
 import sklearn
 from datetime import date
 #load preprocessor and model
-preprocessor=pickle.load(open(r"/home/ramy/سطح المكتب/ahmed/Data Scince and analysis and AI/Data science cousre Epsilon/Machine learning/projects/Final project/Starbucks classifcation/streamlit/preprocsser","rb"))
-model=pickle.load(open(r"/home/ramy/سطح المكتب/ahmed/Data Scince and analysis and AI/Data science cousre Epsilon/Machine learning/projects/Final project/Starbucks classifcation/streamlit/demo","rb"))
+preprocessor=pickle.load(open(r"/home/ramy/deskop/ahmed/Data-Scince-and-analysis-and-AI/Data-science-cousre-Epsilon/Machine-learning/projects/Final-project/Starbucks-classifcation/streamlit/preprocsser","rb"))
+model=pickle.load(open(r"/home/ramy/deskop/ahmed/Data-Scince-and-analysis-and-AI/Data-science-cousre-Epsilon/Machine-learning/projects/Final-project/Starbucks-classifcation/streamlit/demo","rb"))
 data=pd.read_csv("data")
 data["age_group"]=pd.cut(x=data["age"],bins=[18,30,40,50,60,70,80,100],
           labels=["18-30 age","30-40 age","40-50 age","50-60 age","60-70 age","70-80 age","80-above age"])
