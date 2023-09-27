@@ -8,6 +8,7 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import sklearn
 from datetime import date
+from xgboost import XGBClassifier
 #load preprocessor and model
 import os
 os.chdir(r"/mount/src/starbucks/Starbucks-classifcation/streamlit")
