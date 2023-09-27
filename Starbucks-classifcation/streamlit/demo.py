@@ -9,13 +9,13 @@ from plotly.subplots import make_subplots
 import sklearn
 from datetime import date
 #load preprocessor and model
-path_preprocesser=r'/home/ramy/deskop/ahmed/Data-Scince-and-analysis-and-AI/Data-science-cousre-Epsilon/Machine-learning/projects/Final-project/Starbucks-classifcation/streamlit/preprocsser'
-path_model=r'/home/ramy/deskop/ahmed/Data-Scince-and-analysis-and-AI/Data-science-cousre-Epsilon/Machine-learning/projects/Final-project/Starbucks-classifcation/streamlit/demo'
+import os
+os.chdir(r'/home/ramy/deskop/ahmed/Data-Scince-and-analysis-and-AI/Data-science-cousre-Epsilon/Machine-learning/projects/Final-project/Starbucks-classifcation/streamlit')
 import _pickle as cPickle
-with open(path_preprocesser, "rb") as input_file:
+with open('preprocsser', "rb") as input_file:
     preprocessor = cPickle.load(input_file)
-    
-with open(path_model, "rb") as input_file:
+
+with open('demo', "rb") as input_file:
     model = cPickle.load(input_file)
 data=pd.read_csv("data")
 data["age_group"]=pd.cut(x=data["age"],bins=[18,30,40,50,60,70,80,100],
