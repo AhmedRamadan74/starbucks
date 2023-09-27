@@ -10,7 +10,7 @@ import sklearn
 from datetime import date
 #load preprocessor and model
 import os
-os.chdir(r'/home/ramy/deskop/ahmed/Data-Scince-and-analysis-and-AI/Data-science-cousre-Epsilon/Machine-learning/projects/Final-project/Starbucks-classifcation/streamlit')
+os.chdir(r"/mount/src/starbucks/Starbucks-classifcation/streamlit")
 import _pickle as cPickle
 with open('preprocsser', "rb") as input_file:
     preprocessor = cPickle.load(input_file)
