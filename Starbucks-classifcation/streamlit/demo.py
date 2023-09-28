@@ -100,13 +100,13 @@ if add_selectbox =="EDA":
                 st.pyplot(fig)
         #numerical
         numerical=data.select_dtypes(exclude="O").columns.to_list()
-        for col in numerical:
-            if uni==col:
-                plt.title(f"Histgrom of {col}")
-                fig, ax = plt.subplots()
-                ax=sns.histplot(data[col])
-                st.pyplot(fig)
-                break
+       # for col in numerical:
+        #    if uni==col:
+         #       plt.title(f"Histgrom of {col}")
+          #      fig, ax = plt.subplots()
+           #     ax=sns.histplot(data[col])
+            #    st.pyplot(fig)
+             #   break
         
     #########################
     if sb== "Bivarate":
