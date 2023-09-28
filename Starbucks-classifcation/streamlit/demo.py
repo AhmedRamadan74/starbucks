@@ -93,6 +93,11 @@ if add_selectbox =="EDA":
             fig.update_layout(title_text="count of offer_type",title_x=0.5)
             st.plotly_chart(fig)
         ###########
+        if uni=='age:
+                plt.title(f"Histgrom of age")
+                fig, ax = plt.subplots()
+                ax=sns.histplot(data["age])
+                st.pyplot(fig)
         #numerical
         numerical=data.select_dtypes(exclude="O").columns.to_list()
         for col in numerical:
@@ -102,6 +107,7 @@ if add_selectbox =="EDA":
                 ax=sns.histplot(data[col])
                 st.pyplot(fig)
                 break
+        
     #########################
     if sb== "Bivarate":
 
