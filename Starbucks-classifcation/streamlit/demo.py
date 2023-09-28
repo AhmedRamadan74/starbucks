@@ -157,6 +157,7 @@ if add_selectbox =="EDA":
         st.markdown("- males that are recievied  offer of bogo those are most vote from last graph")
 
         #correlation
+        numerical=data.select_dtypes(exclude="O").columns.to_list()
         fig = px.imshow(data[numerical].corr(), text_auto='.2f')
         st.plotly_chart(fig)
         st.markdown("- __There are realation between :__")
