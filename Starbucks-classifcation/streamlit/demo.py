@@ -96,7 +96,7 @@ if add_selectbox =="EDA":
         if uni=='age':
                 plt.title(f"Histgrom of age")
                 fig, ax = plt.subplots()
-                ax=sns.histplot(data["age])
+                ax=sns.histplot(data["age"])
                 st.pyplot(fig)
         #numerical
         numerical=data.select_dtypes(exclude="O").columns.to_list()
