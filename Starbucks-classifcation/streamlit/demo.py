@@ -68,7 +68,7 @@ if add_selectbox =="EDA":
         if uni=="gender":
             fig=px.bar(data_frame=data["gender"].value_counts().reset_index(),
                        x=["index"],
-                       y=df["gender"],
+                       y=["gender"],
                        labels={"index":"gender","gender":"count"},
                        text_auto="0.2s")
             fig.update_traces(textfont_size=12,textposition="outside")
