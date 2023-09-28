@@ -66,8 +66,11 @@ if add_selectbox =="EDA":
         uni=st.selectbox("choose column : ",columns)
         ###########
         if uni=="gender":
-            df=data.gender.value_counts().reset_index().rename(columns={"index":"gender","gender":"count"})
-            fig=px.bar(x=df["gender"],y=df["count"],text_auto="0.2s")
+            fig=px.bar(data_frame=data["gender"].value_counts().reset_index(),
+                       x=["index"],
+                       y=df["gender"],
+                       labels={"index":"gender","gender":"count"},
+                       text_auto="0.2s")
             fig.update_traces(textfont_size=12,textposition="outside")
             fig.update_layout(title_text="count of gender",title_x=0.5)
             st.plotly_chart(fig)
