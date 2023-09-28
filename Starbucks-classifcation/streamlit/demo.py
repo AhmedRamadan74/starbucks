@@ -157,9 +157,8 @@ if add_selectbox =="EDA":
         st.markdown("- males that are recievied  offer of bogo those are most vote from last graph")
 
         #correlation
-        fig,ax=plt.subplots()
-        ax=sns.heatmap(data.corr(),annot=True,fmt=".1f")
-        st.pyplot(fig)
+        fig = px.imshow(data.corr(), text_auto='.2f')
+        st.plotly_chart(fig)
         st.markdown("- __There are realation between :__")
         st.markdown("1) age - income")
         st.markdown("2) rewared - [ difficult , duration]")
