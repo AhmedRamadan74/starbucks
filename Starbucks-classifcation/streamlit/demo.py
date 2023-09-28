@@ -77,7 +77,7 @@ if add_selectbox =="EDA":
         ###########
         if uni=="event":
             df=data.event.value_counts().reset_index()
-            fig=px.bar(data_frame=df,x="index",y="event",text_auto="0.2s",
+            fig=px.bar(data_frame=df,x="event",y="count",text_auto="0.2s",
                 labels={"index":"event",
                         "event":"count"})
             fig.update_traces(textfont_size=12,textposition="outside")
@@ -86,7 +86,7 @@ if add_selectbox =="EDA":
         ########### 
         if uni=="offer_type":
             df=data.offer_type.value_counts().reset_index()
-            fig=px.bar(data_frame=df,x="index",y="offer_type",text_auto="0.2s",
+            fig=px.bar(data_frame=df,x="offer_type",y="count",text_auto="0.2s",
                 labels={"index":"offer_type",
                         "offer_type":"count"})
             fig.update_traces(textfont_size=12,textposition="outside")
