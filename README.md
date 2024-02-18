@@ -28,3 +28,7 @@ transcript.csv
 • person (str) - customer id
 • time (int) - time in hours since start of test. The data begins at time t=0
 • value - (dict of strings) - either an offer id or transaction amount depending on the record
+
+
+[Link website of deployment](https://starbucks-predict.streamlit.app/)
+
